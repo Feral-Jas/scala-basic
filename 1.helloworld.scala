@@ -1,4 +1,5 @@
-println("hello");
-val a = 1;
-println(a);
+println("hello")
+val a = 1
+println(a)
+
 
