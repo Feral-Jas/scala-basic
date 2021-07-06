@@ -61,6 +61,7 @@ for(i<-(2 until 30 by 2))
     println(" "+i)
 
 //match case 比命令式语言中的switch更好
+//match case不需要类似switch的break来告知终止，他是默认break的，一个匹配就会终止其他的比较
 def level(s:Int) = s match{
     case n if n>90 => "A"
     case n if n>80 => "B"
