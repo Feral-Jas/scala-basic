@@ -61,4 +61,10 @@ for(i<-(2 until 30 by 2))
     println(" "+i)
 
 //match case 比命令式语言中的switch更好
-
+def level(s:Int) = s match{
+    case n if n>90 => "A"
+    case n if n>80 => "B"
+    case n if n>70 => "C"
+    case n if n>60 => "D"
+}
+println(level(88))
