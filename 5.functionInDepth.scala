@@ -1,4 +1,6 @@
 import java.nio.file.{Files, Paths}
+import java.time.LocalDateTime
+import java.util.Date
 import scala.annotation.tailrec
 //scala中函数是一等公民,函数可以赋值给一个变量，可以作为一个函数的参数被传入，甚至可以作为函数的返回值返回
 //使用def定义一个函数方法
@@ -44,4 +46,14 @@ val allLine = using(Files.newBufferedReader(Paths.get("/etc/hosts"))) { reader =
 println(allLine)
 
 //match case's greatness
-
+//同时完成校验变量类型并完成类型转换
+for{
+  x<- Seq(321,"x",new Date(),LocalDateTime.now())
+}{
+  x match {
+    case number:Int=>println(s"is number:$number")
+    case str:String=>println(s"is string:$str")
+    case date: Date=>println(s"is date:$date")
+    case localDateTime: LocalDateTime=>println(s"is localdatetime:$localDateTime")
+  }
+}
